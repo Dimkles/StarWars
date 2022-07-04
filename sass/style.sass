@@ -1,0 +1,183 @@
+*, *:after, *:before
+    box-sizing: border-box
+body
+    background: #070506 url('../img/main-bg.png') top right -290%  no-repeat
+    background-size: cover
+    background-attachment: fixed
+    color: #fff
+    font-family: 'Roboto', sans-serif
+.container
+    width: 90%
+    max-width: 1060px
+    margin: auto
+
+// Стили для блока hero
+.header
+    padding-top: 90px
+    display: flex
+    align-items: center
+    &__logo
+        margin-right: 70px
+    &-nav
+        &__link
+            text-decoration: none
+            color: #fff
+            margin-right: 15px
+.hero
+    &__subtitle
+        display: block
+        margin-top: 78px
+        font-size: 40px
+        line-height: 100%   
+    &__title
+        margin-top: 5px
+        font-weight: 900
+        font-size: 64px
+        line-height: 78px
+        margin-bottom: 25px
+    &__text
+        max-width: 572px
+        font-size: 18px
+        line-height: 150%
+        color: #AFAFAF
+    &__premier
+        display: block
+        font-size: 18px
+        line-height: 150%
+        color: #B02000
+        margin-bottom: 5px
+    &__date
+        display: block
+        font-size: 24px
+        line-height: 150%
+        margin-bottom: 46px
+.button
+    border: none
+    &-play
+        display: inline-block
+        text-decoration: none
+        position: relative
+        background: linear-gradient(90deg, #FB641A 0%, #FC3309 100%)
+        border-radius: 300px
+        color: #fff
+        padding: 25px 35px
+        padding-right: 80px
+        text-transform: uppercase
+        font-size: 14px
+        line-height: 16px
+        & span
+            background: #fff url('../img/play_icon.svg') center no-repeat
+            width: 66px
+            height: 66px
+            position: absolute
+            right: 0px
+            top: 0px
+            border-radius: 50%
+    &::after
+        position: absolute
+        content: ''
+        top: -10px
+        right: -10px
+        width: 86px
+        height: 86px
+        $border: 10px
+        border: $border solid rgba(255, 255, 255, 0.3)
+        border-radius: 50%
+.episodes
+    padding: 60px 0
+    &__title
+        font-weight: 700
+        font-size: 18px
+        line-height: 150%
+        margin-bottom: 25px
+.slider
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__item
+        position: relative
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 250px
+        min-height: 200px
+        margin-bottom: 20px
+        padding: 30px
+        box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25)
+        border-radius: 10px
+        transition: all 0.3s
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            z-index: -1
+            width: 100%
+            height: 100%
+            background: rgba(80, 80, 80, 0.86)
+        &:hover
+            background: rgba(64, 101, 255, 0.70)
+    &__image
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: -2
+    &__rating
+        &-label
+            margin-right: 10px
+    &__nav
+        &--left
+            width: 72px
+            height: 72px
+            border: none
+            background: transparent url('../img/arrow-left.svg') no-repeat center
+            cursor: pointer
+            & span
+                display: none
+        &--right
+            width: 72px
+            height: 72px
+            border: none
+            cursor: pointer
+            background: transparent url('../img/arrow-right.svg') no-repeat center
+            & span
+                display: none
+
+.star 
+    display: inline-block
+    width: 12px
+    height: 12px
+    background: url('../img/star.svg') no-repeat center
+    &-o
+        background: url('../img/star-o.svg') no-repeat center
+
+@media( max-width: 1100px)
+    body
+        background: #070506 url('../img/main-bg.png') top right 70%  no-repeat
+
+@media( max-width: 600px)
+    .header
+        flex-direction: column
+        align-items: flex-start
+        &__logo
+            margin-bottom: 30px
+        &-nav
+            display: flex
+            flex-direction: column
+            &__link
+                margin-bottom: 10px
+    .hero
+        &__subtitle
+            font-size: 24px
+        &__title
+            font-size: 36px
+            line-height: 120%
+        &__text
+            font-size: 16px
+    body
+        background: #070506 url('../img/main-bg.png') top right 70%  no-repeat
